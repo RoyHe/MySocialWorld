@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SocialFusion
+
+  Created by 王紫川 on 11-9-14.
+  Copyright 2011年 Tongji Apple Club. All rights reserved.
+*/
+
+"ID_LogIn_All"="未登录";
+"ID_LogOut_All"="已登录，是否登出？";
+"ID_OK"="确定";
+"ID_Cancel"="取消";

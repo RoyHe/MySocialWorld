@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/*Pocket Social CSS Document */
+
+body {
+    font-family:"Helvetica Neue", "黑体"; 
+    background-color: transparent;
+}
+
+#gifImg {
+    width:320px;
+    height:480px;
+    display:table;
+    text-align:center;
+    padding:0; 
+    margin:0px;
+    background-color:transparent;
+}
+
+#gifImg span {
+    display:table-cell;
+    vertical-align:middle;
+}
