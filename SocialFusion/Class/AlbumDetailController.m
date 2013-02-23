@@ -23,7 +23,7 @@
 #define IMAGE_OUT_WIDTH 83
 #define IMAGE_OUT_H_SPACE 17
 #define IMAGE_OUT_HEIGHT 66
-
+#define VIEW_SIZE (270)
 
 
 @implementation AlbumDetailController
@@ -41,7 +41,6 @@
     {
         [_photoID[i] release];
         [_bigURL[i]  release];
-        
     }
     [_albumTitle release];
     [_contentScrollView release];
@@ -50,6 +49,15 @@
     
     
     [super dealloc];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    CGRect rect = self.view.frame;
+    rect.origin.y = rect.origin.y-[UIScreen mainScreen].bounds.size.height+480;
+    self.view.frame = rect;
+
 }
 
 - (void)setFixedInfo
@@ -96,7 +104,7 @@
                         {
                             int wid=i%3;
                             int hei=(i-18)/3;
-                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                             [_photoInAlbum[i].imageView setImage:nil];
                         }
                         if (_albumPageNumber*9>_numberOfPhoto)
@@ -117,7 +125,7 @@
                                 int wid=i%3;
                                 int hei=(i-9)/3;
                                 
-                                _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                                _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                                 [_photoInAlbum[i].imageView setImage:nil];
                                 
                                 
@@ -131,7 +139,7 @@
                                 int wid=i%3;
                                 int hei=(i-9)/3;
                                 
-                                _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                                _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                                 [_photoInAlbum[i].imageView setImage:nil];
                             }
                             
@@ -142,7 +150,7 @@
                             {
                                 int wid=i%3;
                                 int hei=(i-9)/3;
-                                _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                                _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                                 [_photoInAlbum[i].imageView setImage:nil];                    }
                         }
                         
@@ -174,7 +182,7 @@
                             int wid=i%3;
                             int hei=(i-18)/3;
                             
-                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                             [_photoInAlbum[i].imageView setImage:nil];
                         }
                     }
@@ -188,7 +196,7 @@
                         {
                             int wid=i%3;
                             int hei=(i-18)/3;
-                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                             [_photoInAlbum[i].imageView setImage:nil];                        
                         }
                         
@@ -197,7 +205,7 @@
                             int wid=i%3;
                             int hei=(i-18)/3;
                             
-                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                             [_photoInAlbum[i].imageView setImage:nil];
                         }
                         
@@ -210,7 +218,7 @@
                         {
                             int wid=i%3;
                             int hei=(i-18)/3;
-                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                             [_photoInAlbum[i].imageView setImage:nil];     
                         }
                     }
@@ -220,7 +228,7 @@
                     {
                         int wid=i%3;
                         int hei=i/3;
-                        _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                        _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                         [_photoInAlbum[i].imageView setImage:nil];                }
                     
                     break;
@@ -233,7 +241,7 @@
                     {
                         int wid=i%3;
                         int hei=(i-9)/3;
-                        _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                        _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                         [_photoInAlbum[i].imageView setImage:nil];                }
                     
                     if (_albumPageNumber*9>_numberOfPhoto)
@@ -243,7 +251,7 @@
                             int wid=i%3;
                             int hei=(i-9)/3;
                             
-                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                             [_photoInAlbum[i].imageView setImage:nil];                    }
                     }
                     else if (_albumPageNumber*9+9>_numberOfPhoto)  
@@ -254,7 +262,7 @@
                         {
                             int wid=i%3;
                             int hei=i/3;
-                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                             [_photoInAlbum[i].imageView setImage:nil];
                         }
                         
@@ -265,7 +273,7 @@
                             int wid=i%3;
                             int hei=(i)/3;
                             
-                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index-1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                             [_photoInAlbum[i].imageView setImage:nil];
                         }
                         
@@ -277,7 +285,7 @@
                         {
                             int wid=i%3;
                             int hei=i/3;
-                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+                            _photoInAlbum[i].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*(index+1)+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
                             [_photoInAlbum[i].imageView setImage:nil];                }
                         
                     }
@@ -370,8 +378,8 @@
 }
 - (void)returnToAlbum
 {
-    int y=_photoInAlbum[_selectedPhoto].frame.origin.y/270;
-    [_contentScrollView zoomToRect:CGRectMake(0, y*270, 306, 270) animated:YES];
+    int y=_photoInAlbum[_selectedPhoto].frame.origin.y/VIEW_SIZE;
+    [_contentScrollView zoomToRect:CGRectMake(0, y*VIEW_SIZE, 306, VIEW_SIZE) animated:YES];
     [_infoTextView removeFromSuperview];
     [_infoTextView release];
     [_returnToAlbum removeFromSuperview];
@@ -668,7 +676,7 @@
             _photoInAlbum[i+9*j]=[[PhotoInAlbum alloc] init];
             int wid=i%3;
             int hei=i/3;
-            _photoInAlbum[i+9*j].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), 270*j+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
+            _photoInAlbum[i+9*j].frame=CGRectMake(IMAGE_OUT_BEGIN_X+wid*(IMAGE_OUT_V_SPACE+IMAGE_OUT_WIDTH), VIEW_SIZE*j+IMAGE_OUT_BEGIN_Y+hei*(IMAGE_OUT_H_SPACE+IMAGE_OUT_HEIGHT), IMAGE_OUT_WIDTH, IMAGE_OUT_HEIGHT+15);
             [ _photoInAlbum[i+9*j].imageOut addTarget:self action:@selector(showImageDetail:) forControlEvents:UIControlEventTouchUpInside];
             [_contentView addSubview:_photoInAlbum[i+9*j]];
         }

@@ -59,7 +59,7 @@
 				<float key="IBUISectionFooterHeight">22</float>
 			</object>
 			<object class="IBUITableViewCell" id="913547325">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">308</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIView" id="670836645">
@@ -311,7 +311,7 @@
 								<reference key="IBUIFont" ref="214814325"/>
 							</object>
 						</array>
-						<string key="NSFrameSize">{306, 389}</string>
+						<string key="NSFrameSize">{320, 389}</string>
 						<reference key="NSSuperview" ref="913547325"/>
 						<reference key="NSNextKeyView" ref="149883159"/>
 						<reference key="IBUIBackgroundColor" ref="660542250"/>
@@ -322,8 +322,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{306, 390}</string>
-				<reference key="NSSuperview"/>
+				<string key="NSFrameSize">{320, 390}</string>
 				<reference key="NSNextKeyView" ref="670836645"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>

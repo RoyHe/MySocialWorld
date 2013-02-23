@@ -97,7 +97,7 @@
     ((UIScrollView*)self.view).directionalLockEnabled = YES;
     ((UIScrollView*)self.view).delegate = self;
     
-    self.tableView.frame = CGRectMake(306, 40, 306, 320);
+    self.tableView.frame = CGRectMake(306, 40, 306, 320+[UIScreen mainScreen].bounds.size.height-480);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self.view addSubview:self.tableView];

@@ -308,19 +308,6 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "SocialFusion/Class/PostViewController.m"
-         timestampString = "383315920.632615"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "60"
-         endingLineNumber = "60"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "SocialFusion/Class/RepostViewController.m"
          timestampString = "383315938.844724"
          startingColumnNumber = "9223372036854775807"
@@ -328,6 +315,32 @@
          startingLineNumber = "61"
          endingLineNumber = "61"
          landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SocialFusion/SDK/RenrenSDK/RenrenClient.m"
+         timestampString = "383327678.566855"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "401"
+         endingLineNumber = "401"
+         landmarkName = "-request:didFailWithError:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SocialFusion/SDK/RenrenSDK/RenrenClient.m"
+         timestampString = "383327804.423816"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "409"
+         endingLineNumber = "409"
+         landmarkName = "-request:didFailWithROError:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
