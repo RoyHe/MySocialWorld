@@ -62,7 +62,8 @@ static BOOL _isShowingToast;
     
     CGRect frame = vc.view.frame;
     frame.origin.x = 0;
-    frame.origin.y = 460;
+    frame.origin.y = [UIScreen mainScreen].bounds.size.height-20;
+    frame.size.height = frame.size.height-480+[UIScreen mainScreen].bounds.size.height;
     vc.view.frame = frame;
     
 	[[self rootView] addSubview:_backView];

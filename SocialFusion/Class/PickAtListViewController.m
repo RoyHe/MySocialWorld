@@ -28,6 +28,8 @@
 
 @synthesize platformCode = _platformCode;
 
+@synthesize  imageView = _imageView;
+
 - (void)dealloc {
     [_renrenButton release];
     [_weiboButton release];
@@ -45,12 +47,20 @@
     self.weiboButton = nil;
     self.tableView = nil;
     self.textField = nil;
+    
+    self.imageView = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+ //   NSLog(@"%f",[[UIScreen mainScreen] bounds].size.height);
+    if ([[UIScreen mainScreen] bounds].size.height>480)
+    {
+        [self.imageView setImage:[UIImage imageNamed:@"new_status_bg-568h@2x.png"]];
+    }
     // Do any additional setup after loading the view from its nib.
     [self.renrenButton setPostPlatformButtonSelected:YES];
     self.textField.text = @"";

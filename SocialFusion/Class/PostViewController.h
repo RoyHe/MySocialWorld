@@ -26,6 +26,8 @@ typedef enum {
     PostStatusErrorCode _postStatusErrorCode;
     NSUInteger _postCount;
     NSInteger _lastTextViewCount;
+    
+        
 }
 
 @property (nonatomic, retain) IBOutlet UITextView *textView;
@@ -33,6 +35,7 @@ typedef enum {
 @property (nonatomic, retain) IBOutlet UIView *toolBarView;
 @property (nonatomic, retain) IBOutlet UILabel *titleLabel;
 @property (nonatomic, readonly) UITextView *processTextView;
+@property (nonatomic,retain) IBOutlet UIImageView* imageView;
 
 - (IBAction)didClickCancelButton:(id)sender;
 - (IBAction)didClickPostButton:(id)sender;

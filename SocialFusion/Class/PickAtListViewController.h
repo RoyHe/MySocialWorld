@@ -20,6 +20,9 @@
     
     NSMutableArray *_atScreenNames;
     id<PickAtListViewControllerDelegate> _delegate;
+    
+    
+    UIImageView* _imageView;
 }
 
 @property (nonatomic, assign) id<PickAtListViewControllerDelegate> delegate;
@@ -28,6 +31,7 @@
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) IBOutlet UITextField *textField;
 
+@property (nonatomic,retain) IBOutlet UIImageView *imageView;
 - (IBAction)didClickCancelButton:(id)sender;
 - (IBAction)didClickFinishButton:(id)sender;
 

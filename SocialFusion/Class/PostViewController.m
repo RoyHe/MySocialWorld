@@ -25,7 +25,7 @@
 @synthesize textCountLabel = _textCountLabel;
 @synthesize toolBarView = _toolBarView;
 @synthesize titleLabel = _titleLabel;
-
+@synthesize  imageView = _imageView;
 - (void)dealloc {
     [_textView release];
     [_textCountLabel release];
@@ -54,6 +54,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+    if ([[UIScreen mainScreen] bounds].size.height>480)
+    {
+        [self.imageView setImage:[UIImage imageNamed:@"new_status_bg-568h@2x.png"]];
+    }
+    
+    
     [self.textView becomeFirstResponder];
     self.textView.delegate = self;
     self.textView.text = @"";
